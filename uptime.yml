@@ -1,0 +1,8 @@
+---
+  - name: "Get uptime"
+    hosts: all
+    serial: '{{paralle_sessions}}'
+    tasks:
+    - shell: uptime
+      register:hello
+    - debug: msg="{{hello.stdout_lines}}"

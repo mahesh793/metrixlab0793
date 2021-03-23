@@ -1,0 +1,3 @@
+---
+- name: "run unattended-upgrades command"
+  command: unattended-upgrades

@@ -1,0 +1,4 @@
+---
+- name: "Run unattended-upgrades command"
+  import_tasks: run_unattended_upgrades.yml
+  become: true
