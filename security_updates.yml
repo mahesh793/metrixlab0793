@@ -1,0 +1,11 @@
+##
+# Install security updates into all machines to start using awx
+##
+- name: install security updates
+  hosts: all
+  tags: ['install']
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Update security packages
+      raw: sudo unattended-upgrades
